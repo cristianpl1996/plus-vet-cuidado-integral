@@ -6,7 +6,8 @@ import {
   Syringe,
   Heart,
   Sparkles,
-  Activity
+  Activity,
+  Phone
 } from "lucide-react";
 
 const services = [
@@ -67,7 +68,7 @@ const Services = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <span className="inline-block bg-vet-green-light text-primary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            Nuestros Servicios
+            Nuestros servicios
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Cuidamos a tus peludos con{" "}
@@ -111,6 +112,7 @@ const Services = () => {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 bg-gradient-purple text-secondary-foreground px-8 py-4 rounded-full font-bold shadow-purple hover:opacity-90 transition-opacity"
           >
+            <Phone className="w-4 h-4" />
             Solicitar Información
           </a>
         </div>

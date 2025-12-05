@@ -1,18 +1,14 @@
 import { MessageCircle, Clock, MapPin } from "lucide-react";
-import heroPets from "@/assets/hero-pets-real.jpg";
 
 const Hero = () => {
   return (
-    <section id="inicio" className="relative min-h-screen pt-24 pb-16 overflow-hidden">
+    <section id="inicio" className="relative pt-32 pb-32 overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-vet-green-light opacity-50" />
-      <div className="absolute top-20 right-10 w-32 h-32 bg-vet-purple/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-10 w-48 h-48 bg-primary/10 rounded-full blur-3xl" />
-      
       <div className="container mx-auto relative z-10">
-        <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
+        <div className="max-w-4xl mx-auto py-8">
           {/* Content */}
-          <div className="text-center lg:text-left space-y-6 animate-fade-in">
+          <div className="text-center space-y-6 animate-fade-in relative">
             <div className="inline-flex items-center gap-2 bg-card px-4 py-2 rounded-full shadow-card">
               <span className="w-2 h-2 bg-primary rounded-full animate-pulse" />
               <span className="text-sm font-medium text-muted-foreground">
@@ -21,17 +17,17 @@ const Hero = () => {
             </div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-              Especializados en{" "}
+              Clínica veterinaria dedicada al{" "}
               <span className="text-gradient-primary">bienestar animal</span>
             </h1>
             
-            <p className="text-lg text-muted-foreground max-w-xl mx-auto lg:mx-0">
+            <p className="text-lg text-muted-foreground max-w-xl mx-auto">
               En Plus+Vet brindamos servicios veterinarios integrales con un equipo profesional 
               comprometido con la salud y felicidad de tu mascota.
             </p>
 
             {/* Quick Info */}
-            <div className="flex flex-wrap justify-center lg:justify-start gap-4 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 text-sm">
               <div className="flex items-center gap-2 bg-card px-4 py-2 rounded-lg shadow-sm">
                 <Clock className="w-4 h-4 text-primary" />
                 <span>Lun - Sáb: 8:40am - 5:00pm</span>
@@ -43,7 +39,7 @@ const Hero = () => {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <a
                 href="https://wa.me/573143160602?text=Hola,%20quiero%20agendar%20una%20cita%20para%20mi%20mascota"
                 target="_blank"
@@ -51,36 +47,20 @@ const Hero = () => {
                 className="inline-flex items-center justify-center gap-3 bg-gradient-hero text-primary-foreground px-8 py-4 rounded-full font-bold text-lg shadow-button hover:scale-105 transition-transform"
               >
                 <MessageCircle className="w-5 h-5" />
-                Agenda tu Cita por WhatsApp
+                Agenda tu cita por WhatsApp
               </a>
               <a
                 href="#servicios"
                 className="inline-flex items-center justify-center gap-2 bg-card border-2 border-secondary text-secondary px-8 py-4 rounded-full font-bold text-lg hover:bg-secondary hover:text-secondary-foreground transition-colors"
               >
-                Ver Servicios
+                Ver servicios
               </a>
             </div>
-          </div>
 
-          {/* Hero Image */}
-          <div className="relative animate-slide-in-right" style={{ animationDelay: "0.2s" }}>
-            <div className="relative">
-              {/* Decorative elements */}
-              <div className="absolute -top-6 -left-6 w-24 h-24 bg-gradient-purple rounded-full opacity-20 animate-float" />
-              <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-gradient-hero rounded-full opacity-20 animate-float" style={{ animationDelay: "1s" }} />
-              
-              {/* Main Image */}
-              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-card">
-                <img
-                  src={heroPets}
-                  alt="Mascotas felices en Plus+Vet"
-                  className="w-full h-auto object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-              </div>
-
-              {/* Floating Card */}
-              <div className="absolute -bottom-6 -left-6 bg-card p-4 rounded-2xl shadow-card animate-float" style={{ animationDelay: "0.5s" }}>
+            {/* Floating Cards */}
+            <div className="flex flex-wrap justify-center gap-4 pt-8">
+              {/* Card 1: +1000 Mascotas atendidas */}
+              <div className="bg-card p-4 rounded-2xl shadow-card animate-float" style={{ animationDelay: "0.5s" }}>
                 <div className="flex items-center gap-3">
                   <div className="w-12 h-12 bg-gradient-hero rounded-full flex items-center justify-center">
                     <span className="text-2xl">🐾</span>
@@ -88,6 +68,32 @@ const Hero = () => {
                   <div>
                     <p className="font-bold text-foreground">+1000</p>
                     <p className="text-xs text-muted-foreground">Mascotas atendidas</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 2: +10 años de experiencia */}
+              <div className="bg-card p-4 rounded-2xl shadow-card animate-float" style={{ animationDelay: "0.8s" }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-purple rounded-full flex items-center justify-center">
+                    <span className="text-2xl">⭐</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground">+10 años</p>
+                    <p className="text-xs text-muted-foreground">De experiencia</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Card 3: Nueva card */}
+              <div className="bg-card p-4 rounded-2xl shadow-card animate-float" style={{ animationDelay: "1.1s" }}>
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">💜</span>
+                  </div>
+                  <div>
+                    <p className="font-bold text-foreground">100%</p>
+                    <p className="text-xs text-muted-foreground">Comprometidos</p>
                   </div>
                 </div>
               </div>

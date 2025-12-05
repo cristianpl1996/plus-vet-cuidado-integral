@@ -16,23 +16,24 @@ const Header = () => {
     <header className="fixed top-0 left-0 right-0 z-50 bg-card/95 backdrop-blur-md shadow-card">
       <div className="container mx-auto">
         <div className="flex items-center justify-between py-3">
-          {/* Logo */}
-          <a href="#inicio" className="flex items-center gap-2">
-            <img src={logo} alt="Plus+Vet Logo" className="h-14 w-auto" />
-          </a>
+          {/* Logo y Desktop Navigation */}
+          <div className="flex items-center gap-8">
+            <a href="#inicio" className="flex items-center gap-2">
+              <img src={logo} alt="Plus+Vet Logo" className="h-14 w-auto" />
+            </a>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200"
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+            <nav className="hidden md:flex items-center gap-8">
+              {navLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-foreground/80 hover:text-primary font-medium transition-colors duration-200"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
 
           {/* CTA Button */}
           <a
@@ -76,7 +77,7 @@ const Header = () => {
                 className="flex items-center justify-center gap-2 bg-gradient-hero text-primary-foreground px-5 py-3 rounded-full font-semibold shadow-button"
               >
                 <Phone className="w-4 h-4" />
-                Agendar Cita
+                Agendar cita
               </a>
             </div>
           </nav>

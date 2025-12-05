@@ -25,7 +25,7 @@ const Gallery = () => {
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="inline-block bg-vet-purple-light text-secondary px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
-            Nuestras Promociones
+            Nuestras promociones
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Conoce todo lo que{" "}
@@ -42,17 +42,14 @@ const Gallery = () => {
             <button
               key={index}
               onClick={() => setSelectedImage(promo.src)}
-              className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary"
+              className="group relative overflow-hidden rounded-2xl shadow-card hover:shadow-lg transition-all duration-300 hover:-translate-y-1 focus:outline-none focus:ring-2 focus:ring-primary aspect-square"
             >
               <img
                 src={promo.src}
                 alt={promo.alt}
-                className="w-full h-auto object-cover transition-transform duration-500 group-hover:scale-105"
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-              <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                <p className="text-card text-sm font-medium">{promo.alt}</p>
-              </div>
             </button>
           ))}
         </div>
